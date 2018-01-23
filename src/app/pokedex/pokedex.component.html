@@ -1,0 +1,12 @@
+<fieldset>
+	<h2>Enter in the pokedex number</h2>
+
+<form (submit)="requestPokemon()">
+	<input type="text" name="dexNumber" [(ngModel)]="pokemon.dexNumber">
+	<input type="submit" name="">
+</form>
+<div *ngIf="displayedPokemon != undefined">
+<h2>Your Pokemon is: {{displayedPokemon.name}}</h2>
+<img src="{{displayedPokemon.sprites.front_default}}">
+</div>
+</fieldset>
